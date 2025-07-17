@@ -5,7 +5,7 @@
 
 A customizable Vue 3 component for displaying a human muscle anatomy chart with highlighted muscle groups, using an SVG I created myself. Built with TypeScript for scalability and type safety.
 
-![Screenshot of the muscle anatomy component](https://raw.githubusercontent.com/LucaWahlen/vue-human-muscle-anatomy/main/screenshot.png)
+![Screenshot of the muscle anatomy component](https://raw.githubusercontent.com/LucaWahlen/vue-human-muscle-anatomy/refs/heads/main/screenshot.png)
 
 ## Features
 
