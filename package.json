@@ -1,0 +1,48 @@
+{
+  "name": "vue-human-muscle-anatomy",
+  "version": "0.0.1",
+  "description": "A Vue component for displaying an interactive human muscle anatomy chart.",
+  "author": "Luca Wahlen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LucaWahlen/vue-human-muscle-anatomy"
+  },
+  "license": "MIT",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/vue-human-muscle-anatomy.umd.cjs",
+  "module": "./dist/vue-human-muscle-anatomy.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-human-muscle-anatomy.js",
+      "require": "./dist/vue-human-muscle-anatomy.umd.cjs"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.14",
+    "@vitejs/plugin-vue": "^6.0.0",
+    "@vue/tsconfig": "^0.7.0",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.4",
+    "vite-plugin-dts": "^4.5.4",
+    "vue-tsc": "^2.2.12"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.17"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "component",
+    "muscle",
+    "anatomy",
+    "human",
+    "svg",
+    "fitness"
+  ],
+  "packageManager": "pnpm@9.6.0"
+}
