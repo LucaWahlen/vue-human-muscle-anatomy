@@ -1,6 +1,6 @@
 {
   "name": "@lucawahlen/vue-human-muscle-anatomy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Vue component for displaying an interactive human muscle anatomy chart.",
   "author": "Luca Wahlen",
   "repository": {
