@@ -1,6 +1,6 @@
 {
   "name": "@lucawahlen/vue-human-muscle-anatomy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Vue component for displaying an interactive human muscle anatomy chart.",
   "author": "Luca Wahlen",
   "repository": {
@@ -14,11 +14,11 @@
   "module": "./dist/vue-human-muscle-anatomy.js",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/vue-human-muscle-anatomy.js",
       "require": "./dist/vue-human-muscle-anatomy.umd.cjs"
     }
   },
-  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "vite build"
   },
