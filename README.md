@@ -1,13 +1,12 @@
 # Vue Human Muscle Anatomy
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 A customizable Vue 3 component for displaying a human muscle anatomy chart with highlighted muscle groups, using an SVG I created myself. Built with TypeScript for scalability and type safety.
 
 ![Screenshot of the muscle anatomy component](https://raw.githubusercontent.com/LucaWahlen/vue-human-muscle-anatomy/refs/heads/main/screenshot.png)
 
 ## Features
 
+*   **Male and Female Models:** Choose between male or female anatomy models.
 *   **Scalable SVG:** Renders a crisp SVG image that scales to any size.
 *   **Customizable Colors:** Easily change the colors for default muscles, primary highlights, and secondary highlights.
 *   **Opacity Control:** Adjust the opacity of highlighted muscle groups.
@@ -35,7 +34,8 @@ Import the component and use it in your Vue templates. You can control the highl
 <template>
   <div>
     <h1>My Workout Plan</h1>
-    <HumanAnatomy
+    <HumanAnatomy 
+      gender="female"
       :selected-primary-muscle-groups="['triceps', 'lowerBack']"
       :selected-secondary-muscle-groups="['hamstrings', 'calves']"
       primary-highlight-color="#007bff"
@@ -53,36 +53,42 @@ import HumanAnatomy from '@lucawahlen/vue-human-muscle-anatomy';
 
 The component accepts the following props:
 
-| Prop                          | Type             | Description                                                | Default         |
-| ----------------------------- | ---------------- | ---------------------------------------------------------- | --------------- |
-| `defaultMuscleColor`          | `string`         | The color for non-highlighted muscles.                     | `'#1f1f1f'`     |
-| `backgroundColor`             | `string`         | The background color of the SVG.                           | `'#000000'`     |
-| `primaryHighlightColor`       | `string`         | The highlight color for primary muscle groups.             | `'#ff0000'`     |
-| `secondaryHighlightColor`     | `string`         | The highlight color for secondary muscle groups.           | `'#ff0000'`     |
-| `primaryOpacity`              | `number`         | The opacity for primary highlights (0 to 1).               | `0.5`           |
-| `secondaryOpacity`            | `number`         | The opacity for secondary highlights (0 to 1).             | `0.2`           |
-| `selectedPrimaryMuscleGroups` | `MuscleGroup[]`  | An array of primary muscle groups to highlight.            | `[]`            |
-| `selectedSecondaryMuscleGroups`| `MuscleGroup[]` | An array of secondary muscle groups to highlight.          | `[]`            |
+| Prop                          | Type             | Description                                           | Default         |
+| ----------------------------- | ---------------- |-------------------------------------------------------| --------------- |
+| `gender`                      | `string`         | The gender of the anatomy model ('male' or 'female'). | `'male'`
+| `defaultMuscleColor`          | `string`         | The color for non-highlighted muscles.                | `'#1f1f1f'`     |
+| `backgroundColor`             | `string`         | The background color of the SVG.                      | `'#000000'`     |
+| `primaryHighlightColor`       | `string`         | The highlight color for primary muscle groups.        | `'#ff0000'`     |
+| `secondaryHighlightColor`     | `string`         | The highlight color for secondary muscle groups.      | `'#ff0000'`     |
+| `primaryOpacity`              | `number`         | The opacity for primary highlights (0 to 1).          | `0.5`           |
+| `secondaryOpacity`            | `number`         | The opacity for secondary highlights (0 to 1).        | `0.2`           |
+| `selectedPrimaryMuscleGroups` | `MuscleGroup[]`  | An array of primary muscle groups to highlight.       | `[]`            |
+| `selectedSecondaryMuscleGroups`| `MuscleGroup[]` | An array of secondary muscle groups to highlight.     | `[]`            |
 
 ## Available Muscle Groups
 
 You can pass the following string values in the `selectedPrimaryMuscleGroups` and `selectedSecondaryMuscleGroups` arrays.
 
-*   `triceps`
-*   `forearms`
-*   `abductors`
-*   `adductors`
-*   `hamstrings`
-*   `quads`
-*   `shins`
-*   `calves`
-*   `lowerBack`
-*   `rotatorCuffs`
-*   `rearDelts`
-*   `lats`
-*   `traps`
-*   `glutes`
-*   `neck`
+* chest
+* lats
+* traps
+* rotatorCuffs
+* lowerBack
+* frontDelts
+* sideDelts
+* rearDelts
+* triceps
+* biceps
+* forearms
+* abs
+* obliques
+* glutes
+* quads
+* hamstrings
+* adductors
+* abductors
+* calves
+* neck
 
 ## License
 
