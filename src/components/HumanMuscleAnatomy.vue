@@ -286,21 +286,23 @@ const props = withDefaults(
 );
 
 function getStyle(muscleGroup?: MuscleGroup) {
-  if (props.selectedPrimaryMuscleGroups && muscleGroup) {
-    if (props.selectedPrimaryMuscleGroups.includes(muscleGroup)) {
-      return {
-        fill: props.primaryHighlightColor,
-        opacity: props.primaryOpacity
-      };
-    }
-  } else if (props.selectedSecondaryMuscleGroups && muscleGroup) {
-    if (props.selectedSecondaryMuscleGroups.includes(muscleGroup)) {
-      return {
-        fill: props.secondaryHighlightColor,
-        opacity: props.secondaryOpacity
-      };
-    }
+  // Check if muscle is in primary group
+  if (muscleGroup && props.selectedPrimaryMuscleGroups?.includes(muscleGroup)) {
+    return {
+      fill: props.primaryHighlightColor,
+      opacity: props.primaryOpacity
+    };
   }
+
+  // Check if muscle is in secondary group
+  if (muscleGroup && props.selectedSecondaryMuscleGroups?.includes(muscleGroup)) {
+    return {
+      fill: props.secondaryHighlightColor,
+      opacity: props.secondaryOpacity
+    };
+  }
+
+  // Default style for non-highlighted muscles
   return {
     fill: props.defaultMuscleColor
   };
